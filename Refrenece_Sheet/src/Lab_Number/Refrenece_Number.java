@@ -31,4 +31,35 @@ public class Refrenece_Number {
         int speed = Integer.parseInt(inputs);
         System.out.println("Hi");
     }
+
+}
+
+class Fraction{
+    private int numerator = 2;
+    private int denominator = 3;
+
+    public void setNumerator(int numerator){
+        this.numerator = numerator;
+    }
+
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public Fraction multiplyFraction(Fraction otherFraction){
+        int n = this.numerator * otherFraction.getNumerator();
+        int d = this.denominator * otherFraction.getDenominator();
+        Fraction newFraction = new Fraction();
+        newFraction.setNumerator(n);
+        newFraction.setDenominator(d);
+        return newFraction;
+    }
 }
